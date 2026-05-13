@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Navbar from '@/components/Navbar'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -24,10 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body style={{ fontFamily: 'Inter, system-ui, sans-serif' }} className="antialiased">
-        <Navbar />
-        <main style={{ paddingTop: 64 }}>
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   )
